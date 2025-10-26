@@ -222,21 +222,79 @@
     <div class="main__container container">
         <div class="main__flex">
             <div class="filter">
-    <div class="filter__flex">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod recusandae repellat
-        obcaecati fugit hic quisquam enim consectetur iste id rerum. Nam deserunt fugiat aliquam neque unde repellendus
-        enim nihil, blanditiis tenetur dicta repudiandae non velit labore asperiores voluptas nisi tempore maiores
-        architecto explicabo accusantium. Quisquam doloremque, vel eius ducimus sunt ipsum enim alias amet animi fugiat
-        laborum nam perferendis beatae dignissimos ipsa eos deleniti numquam ad necessitatibus nobis reiciendis sit
-        nostrum reprehenderit? Facere, quam. Consequuntur unde voluptatibus blanditiis fugiat quaerat assumenda atque
-        iure maxime, repellat vel voluptas quisquam dignissimos, hic expedita ratione quas praesentium, dolorem sint!
-        Asperiores et ipsum autem cum ratione veniam laborum delectus error, unde perspiciatis inventore alias ducimus
-        dolor ad quas ea veritatis fuga, velit vel pariatur? Minima totam cupiditate voluptatibus debitis? Maiores
-        consequatur praesentium id architecto aut repellendus quae vitae, accusantium eum similique odio facere et harum
-        dolorem nam totam voluptatum sit, sint, enim debitis porro aliquam ipsam incidunt cumque. Blanditiis voluptatum
-        pariatur veritatis, perspiciatis perferendis, eveniet doloribus tempore deleniti ratione voluptate aliquam qui
-        asperiores architecto aspernatur minima reiciendis, autem beatae veniam quis assumenda repudiandae consequuntur
-        harum. Eveniet perferendis temporibus neque. Beatae voluptas quidem odio expedita eligendi. Tempora delectus
-        cumque, enim unde maiores tenetur id nulla.</div>
+    <form action="">
+        <div class="filter__flex">
+            <div class="filter__mobile">
+                <div class="filter__zagol">
+                    Фильтры
+                </div>
+                <div class="filter__close">
+                    <img src="./img/icons/icons.svg#close-svgrepo-com" alt="">
+
+                </div>
+            </div>
+            <div class="filter__tegi tegi">
+                <div class="tegi__title filter__title">Теги</div>
+                <input type="text" placeholder="🔥 Найти теги">
+            </div>
+            <div class="filter__title">Режимы игры</div>
+            <div class="filter__checks">
+                <div class="check">
+                    <input type="checkbox" name="reg" id="pvp">
+                    <label for="pvp">PVP</label>
+                    <div class="check__text">706</div>
+                </div>
+                <div class="check">
+                    <input type="checkbox" name="reg" id="ana">
+                    <label for="ana">Анархия</label>
+                    <div class="check__text">706</div>
+                </div>
+                <div class="check">
+                    <input type="checkbox" name="reg" id="pol">
+                    <label for="pol">Политические</label>
+                    <div class="check__text">700</div>
+                </div>
+            </div>
+            <div class="filter__title">Количество игроков</div>
+            <input type="range" name="" id="" min="0" max="1000">
+            <div class="filter__title">Версии</div>
+            <div class="filter__checks">
+                <div class="check">
+                    <input type="checkbox" name="ver" id="21">
+                    <label for="21">1.21</label>
+                    <div class="check__text">706</div>
+                </div>
+                <div class="check">
+                    <input type="checkbox" name="ver" id="89">
+                    <label for="89">1.89</label>
+                    <div class="check__text">706</div>
+                </div>
+                <div class="check">
+                    <input type="checkbox" name="ver" id="700">
+                    <label for="700">2.1</label>
+                    <div class="check__text">700</div>
+                </div>
+            </div>
+            <div class="filter__title">Тематика</div>
+            <div class="filter__checks">
+                <div class="check">
+                    <input type="checkbox" name="ver" id="21">
+                    <label for="21">1.21</label>
+                    <div class="check__text">706</div>
+                </div>
+                <div class="check">
+                    <input type="checkbox" name="ver" id="89">
+                    <label for="89">1.89</label>
+                    <div class="check__text">706</div>
+                </div>
+                <div class="check">
+                    <input type="checkbox" name="ver" id="700">
+                    <label for="700">2.1</label>
+                    <div class="check__text">700</div>
+                </div>
+            </div>
+        </div>
+    </form>
 </div>
             <div class="rest">
     <div class="rest__flex">
@@ -270,7 +328,10 @@
         </div>
         <div class="rest__panel panel">
             <div class="panel__flex">
-                <div class="panel__tags">Все теги ⏷</div>
+                <div class="panel__tags panel__tags_filters">Фильтры
+                </div>
+                <div class="panel__tags panel__tags_showtags">Все теги ⏷
+                </div>
                 <input type="text" placeholder="Поиск серверов...">
                 <div class="panel_sort sort">
                     <div class="sort__item">Сортировка</div>
@@ -312,6 +373,186 @@
                                     for="MOTD">MOTDMOTD</label>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel__show show">
+    <div class="show__flex">
+        <div class="show__zapad zapad">
+            <div class="zapad__element element">
+                <div class="element__title">
+                    Режимы игры
+                </div>
+                <div class="element__telo">
+                    <div class="">PVP</div>
+                    <div class="">Анархия</div>
+                    <div class="">Политические</div>
+                    <div class="">Ванильные</div>
+                    <div class="">Гриф</div>
+                    <div class="">Цивилизация</div>
+                </div>
+            </div>
+            <div class="zapad__element element">
+                <div class="element__title">
+                    Версии
+                </div>
+                <div class="element__telo">
+                    <div class="">1.1</div>
+                    <div class="">PEPE 1.19.2</div>
+                    <div class="">PEPE 1.19.3</div>
+                    <div class="">PEPE 1.19.0</div>
+                    <div class="">PEPE 1.19.7</div>
+                    <div class="">PEPE 1.19.8</div>
+                </div>
+            </div>
+            <div class="zapad__element element">
+                <div class="element__title">
+                    Мини-игры
+                </div>
+                <div class="element__telo">
+                    <div class="">С мини-играми</div>
+                    <div class="">Без мин-игр</div>
+                    <div class="">Королевская битва</div>
+                    <div class="">Дуэли</div>
+                    <div class="">Столбы удачи</div>
+                    <div class="">Билд Батл</div>
+                </div>
+            </div>
+            <div class="zapad__element element">
+                <div class="element__title">
+                    Донат и бонусы
+                </div>
+                <div class="element__telo">
+                    <div class="">Бесплатный донат</div>
+                    <div class="">Кит старт</div>
+                    <div class="">С кейсами</div>
+                    <div class="">Бесплатная админка</div>
+                    <div class="">Команда</div>
+                </div>
+            </div>
+        </div>
+        <div class="show__vostok vostok">
+            <div class="zapad__element element">
+                <div class="element__title">
+                    Платформа
+                </div>
+                <div class="element__telo">
+                    <div class="">Java</div>
+                    <div class="">Bedrock</div>
+                    <div class="">Кроссплатформенные</div>
+                </div>
+            </div>
+            <div class="zapad__element element">
+                <div class="element__title">
+                    Доступ
+                </div>
+                <div class="element__telo">
+                    <div class="">Лицензионные</div>
+                    <div class="">Пиратские</div>
+                    <div class="">Приватные</div>
+                </div>
+            </div>
+            <div class="zapad__element element">
+                <div class="element__title">
+                    Язык и страны
+                </div>
+                <div class="element__telo">
+                    <div class="">Русские</div>
+                    <div class="">Украинские</div>
+                    <div class="">Зарубежные</div>
+                    <div class="">Польские</div>
+                    <div class="">Американские</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
+        <div class="rest__boxes boxes">
+            <div class="boxes__flex">
+                <div class="boxes__box box">
+                    <div class="box__odin">
+                        <div class="box__logo">
+                            <img src="../img/logos/IMAGE (1).png" alt="">
+                        </div>
+                        <div class="box__palec">
+                            <div class=""><img src="img/icons/icons.svg#palec" alt=""></div>
+                            <div class="">103</div>
+                        </div>
+                    </div>
+                    <div class="box__dva dva">
+                        <div class="dva__top">
+                            <a href="/server" class="dva__title">Hypixel</a>
+                            <div class="dva__status">🔥 Очень популярный</div>
+                        </div>
+                        <div class="dva__middle">
+                            19 уникальных мини-игр от BedWars до Counter-Strike в одном месте
+                        </div>
+                        <div class="dva__bottom">
+                            <div class="dva__igroki">
+                                <span>17 850</span> игроков онлайн
+                            </div>
+                            <div class="dva__versii">
+                                <div class="">Версия: <span>1.2</span></div>
+                            </div>
+                            <div class="dva__socials">
+                                <div class="social">
+                                    <div class="social__img">
+                                        <img src="img/icons/icons.svg#yt" alt="">
+                                    </div>
+                                    <div class="social__text">866K</div>
+                                </div>
+                                <div class="social">
+                                    <div class="social__img">
+                                        <img src="img/icons/icons.svg#dc" alt="">
+                                    </div>
+                                    <div class="social__text">469K</div>
+                                </div>
+                                <div class="social">
+                                    <div class="social__img">
+                                        <img src="img/icons/icons.svg#vk" alt="">
+                                    </div>
+                                    <div class="social__text">17K</div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="box__tri tri">
+                        <div class="tri__banner">
+                            <img src="../img/banners/IMAGE (1).png" alt="">
+                        </div>
+                        <div class="tri__tags">
+                            <div class="">Анархия 🖒 28</div>
+                            <div class="">PVP 🖒 23</div>
+                            <div class="">Аукционы 🖒 27</div>
+                            <div class="">Кастомные предметы 🖒 20</div>
+                            <!-- <div class="">Экономика</div>
+                            <div class="">С античитом</div>
+                            <div class="">С плагинами</div> -->
+                        </div>
+
+                    </div>
+                    <div class="box__chetire chetire">
+                        <div class="chetire__top">
+                            <div class="chetire__comp">
+                                <img src="./img/icons/icons.svg#computer-and-house-svgrepo-com" alt="">
+                            </div>
+                            <div class="chetire__text">mc.hypixel.net</div>
+                            <div class="chetire__copy">
+                                <img src="./img/icons/icons.svg#copy-svgrepo-com" alt="">
+                            </div>
+                        </div>
+
+                        <div class="chetire__opis">
+                            Копирований IP сервера: в октябре: <span>9330</span>, сегодня <span>185</span>
+                        </div>
+
+                        <div class="chetire__obzor">Обзор сервера ⏷</div>
+
+
+
                     </div>
                 </div>
             </div>
