@@ -1,12 +1,108 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta charset="utf-8"/>
-		<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
-		<title>SVG stack preview | svg-sprite</title>
-		<style>@charset "UTF-8";body{padding:0;margin:0;color:#666;background:#fafafa;font-family:Arial,Helvetica,sans-serif;font-size:1em;line-height:1.4}header{display:block;padding:3em 3em 2em 3em;background-color:#fff}header p{margin:2em 0 0 0}section{border-top:1px solid #eee;padding:2em 3em 0 3em}section ul{margin:0;padding:0}section li{display:inline;display:inline-block;background-color:#fff;position:relative;margin:0 2em 2em 0;vertical-align:top;border:1px solid #ccc;padding:1em 1em 3em 1em;cursor:default}.icon-box{margin:0;width:144px;height:144px;position:relative;background:#ccc url("data:image/gif;base64,R0lGODlhDAAMAIAAAMzMzP///yH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjEgNjQuMTQwOTQ5LCAyMDEwLzEyLzA3LTEwOjU3OjAxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1LjEgV2luZG93cyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozQjk4OTI0MUY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozQjk4OTI0MkY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjNCOTg5MjNGRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjNCOTg5MjQwRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAAAAAAAsAAAAAAwADAAAAhaEH6mHmmzcgzJAUG/NVGrfOZ8YLlABADs=") top left repeat;border:1px solid #ccc;display:table-cell;vertical-align:middle;text-align:center}.icon{display:inline;display:inline-block}h1{margin-top:0}h2{margin:0;padding:0;font-size:1em;font-weight:normal;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;position:absolute;left:1em;right:1em;bottom:1em}footer{display:block;margin:0;padding:0 3em 3em 3em}footer p{margin:0;font-size:.7em}footer a{color:#0f7595;margin-left:0}</style>
 
-<!--
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<title>SVG stack preview | svg-sprite</title>
+	<style>
+		@charset "UTF-8";
+
+		body {
+			padding: 0;
+			margin: 0;
+			color: #666;
+			background: #fafafa;
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 1em;
+			line-height: 1.4
+		}
+
+		header {
+			display: block;
+			padding: 3em 3em 2em 3em;
+			background-color: #fff
+		}
+
+		header p {
+			margin: 2em 0 0 0
+		}
+
+		section {
+			border-top: 1px solid #eee;
+			padding: 2em 3em 0 3em
+		}
+
+		section ul {
+			margin: 0;
+			padding: 0
+		}
+
+		section li {
+			display: inline;
+			display: inline-block;
+			background-color: #fff;
+			position: relative;
+			margin: 0 2em 2em 0;
+			vertical-align: top;
+			border: 1px solid #ccc;
+			padding: 1em 1em 3em 1em;
+			cursor: default
+		}
+
+		.icon-box {
+			margin: 0;
+			width: 144px;
+			height: 144px;
+			position: relative;
+			background: #ccc url("data:image/gif;base64,R0lGODlhDAAMAIAAAMzMzP///yH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjEgNjQuMTQwOTQ5LCAyMDEwLzEyLzA3LTEwOjU3OjAxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1LjEgV2luZG93cyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozQjk4OTI0MUY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozQjk4OTI0MkY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjNCOTg5MjNGRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjNCOTg5MjQwRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAAAAAAAsAAAAAAwADAAAAhaEH6mHmmzcgzJAUG/NVGrfOZ8YLlABADs=") top left repeat;
+			border: 1px solid #ccc;
+			display: table-cell;
+			vertical-align: middle;
+			text-align: center
+		}
+
+		.icon {
+			display: inline;
+			display: inline-block
+		}
+
+		h1 {
+			margin-top: 0
+		}
+
+		h2 {
+			margin: 0;
+			padding: 0;
+			font-size: 1em;
+			font-weight: normal;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			position: absolute;
+			left: 1em;
+			right: 1em;
+			bottom: 1em
+		}
+
+		footer {
+			display: block;
+			margin: 0;
+			padding: 0 3em 3em 3em
+		}
+
+		footer p {
+			margin: 0;
+			font-size: .7em
+		}
+
+		footer a {
+			color: #0f7595;
+			margin-left: 0
+		}
+	</style>
+
+	<!--
 
 Sprite shape dimensions
 ====================================================================================================
@@ -16,64 +112,221 @@ They might well be outsourced to an external stylesheet of course.
 
 -->
 
-<style type="text/css">
-	.svg-aptaim-dims { width: 16px; height: 16px; }
-	.svg-bel-dims { width: 16px; height: 16px; }
-	.svg-close-svgrepo-com-dims { width: 800px; height: 800px; }
-	.svg-comptr-dims { width: 16px; height: 16px; }
-	.svg-computer-and-house-svgrepo-com-dims { width: 800px; height: 800px; }
-	.svg-copy-svgrepo-com-dims { width: 800px; height: 800px; }
-	.svg-copymel-dims { width: 11px; height: 11px; }
-	.svg-dc-dims { width: 14px; height: 14px; }
-	.svg-down-dims { width: 11px; height: 11px; }
-	.svg-galka-dims { width: 12px; height: 12px; }
-	.svg-golosa-dims { width: 16px; height: 16px; }
-	.svg-igroki-dims { width: 16px; height: 16px; }
-	.svg-ip-dims { width: 16px; height: 16px; }
-	.svg-laun-dims { width: 16px; height: 16px; }
-	.svg-left-circle-svgrepo-com-dims { width: 800px; height: 800px; }
-	.svg-magnifier-svgrepo-com-dims { width: 800px; height: 800px; }
-	.svg-menu-1-svgrepo-com-dims { width: 800px; height: 800px; }
-	.svg-palec-dims { width: 16px; height: 16px; }
-	.svg-ping-dims { width: 16px; height: 16px; }
-	.svg-plat-dims { width: 16px; height: 16px; }
-	.svg-player-dims { width: 12px; height: 12px; }
-	.svg-podpis-dims { width: 11px; height: 11px; }
-	.svg-rec-dims { width: 16px; height: 16px; }
-	.svg-right-circle-svgrepo-com-dims { width: 800px; height: 800px; }
-	.svg-sait-dims { width: 14px; height: 16px; }
-	.svg-server-dims { width: 12px; height: 12px; }
-	.svg-signl-dims { width: 16px; height: 16px; }
-	.svg-smartphone-2-svgrepo-com-dims { width: 800px; height: 800px; }
-	.svg-strana-dims { width: 16px; height: 16px; }
-	.svg-tg-dims { width: 16px; height: 16px; }
-	.svg-time-dims { width: 11px; height: 11px; }
-	.svg-top-minecrafter-dims { width: 512px; height: 512px; }
-	.svg-up-dims { width: 11px; height: 11px; }
-	.svg-vers-dims { width: 16px; height: 16px; }
-	.svg-vk-dims { width: 14px; height: 14px; }
-	.svg-windows-applications-svgrepo-com-dims { width: 32px; height: 32px; }
-	.svg-yaz-dims { width: 16px; height: 16px; }
-	.svg-yt-dims { width: 14px; height: 14px; }
-</style>
+	<style type="text/css">
+		.svg-aptaim-dims {
+			width: 16px;
+			height: 16px;
+		}
 
-<!--
+		.svg-bel-dims {
+			width: 16px;
+			height: 16px;
+		}
+
+		.svg-close-svgrepo-com-dims {
+			width: 800px;
+			height: 800px;
+		}
+
+		.svg-comptr-dims {
+			width: 16px;
+			height: 16px;
+		}
+
+		.svg-computer-and-house-svgrepo-com-dims {
+			width: 800px;
+			height: 800px;
+		}
+
+		.svg-copy-svgrepo-com-dims {
+			width: 800px;
+			height: 800px;
+		}
+
+		.svg-copymel-dims {
+			width: 11px;
+			height: 11px;
+		}
+
+		.svg-dc-dims {
+			width: 14px;
+			height: 14px;
+		}
+
+		.svg-down-dims {
+			width: 11px;
+			height: 11px;
+		}
+
+		.svg-galka-dims {
+			width: 12px;
+			height: 12px;
+		}
+
+		.svg-golosa-dims {
+			width: 16px;
+			height: 16px;
+		}
+
+		.svg-igroki-dims {
+			width: 16px;
+			height: 16px;
+		}
+
+		.svg-ip-dims {
+			width: 16px;
+			height: 16px;
+		}
+
+		.svg-laun-dims {
+			width: 16px;
+			height: 16px;
+		}
+
+		.svg-left-circle-svgrepo-com-dims {
+			width: 800px;
+			height: 800px;
+		}
+
+		.svg-magnifier-svgrepo-com-dims {
+			width: 800px;
+			height: 800px;
+		}
+
+		.svg-menu-1-svgrepo-com-dims {
+			width: 800px;
+			height: 800px;
+		}
+
+		.svg-palec-dims {
+			width: 16px;
+			height: 16px;
+		}
+
+		.svg-ping-dims {
+			width: 16px;
+			height: 16px;
+		}
+
+		.svg-plat-dims {
+			width: 16px;
+			height: 16px;
+		}
+
+		.svg-player-dims {
+			width: 12px;
+			height: 12px;
+		}
+
+		.svg-podpis-dims {
+			width: 11px;
+			height: 11px;
+		}
+
+		.svg-rec-dims {
+			width: 16px;
+			height: 16px;
+		}
+
+		.svg-right-circle-svgrepo-com-dims {
+			width: 800px;
+			height: 800px;
+		}
+
+		.svg-sait-dims {
+			width: 14px;
+			height: 16px;
+		}
+
+		.svg-server-dims {
+			width: 12px;
+			height: 12px;
+		}
+
+		.svg-signl-dims {
+			width: 16px;
+			height: 16px;
+		}
+
+		.svg-smartphone-2-svgrepo-com-dims {
+			width: 800px;
+			height: 800px;
+		}
+
+		.svg-strana-dims {
+			width: 16px;
+			height: 16px;
+		}
+
+		.svg-tg-dims {
+			width: 16px;
+			height: 16px;
+		}
+
+		.svg-time-dims {
+			width: 11px;
+			height: 11px;
+		}
+
+		.svg-top-minecrafter-dims {
+			width: 512px;
+			height: 512px;
+		}
+
+		.svg-up-dims {
+			width: 11px;
+			height: 11px;
+		}
+
+		.svg-vers-dims {
+			width: 16px;
+			height: 16px;
+		}
+
+		.svg-vk-dims {
+			width: 14px;
+			height: 14px;
+		}
+
+		.svg-windows-applications-svgrepo-com-dims {
+			width: 32px;
+			height: 32px;
+		}
+
+		.svg-yaz-dims {
+			width: 16px;
+			height: 16px;
+		}
+
+		.svg-yt-dims {
+			width: 14px;
+			height: 14px;
+		}
+	</style>
+
+	<!--
 ====================================================================================================
 -->
 
-	</head>
-	<body>
-		<header>
-			<h1>SVG stack preview</h1>
-			<p>This preview features an SVG stack. Please have a look at the HTML source for further details and be aware of the following constraints:</p>
-			<ul>
-				<li>Your browser has to <a href="http://caniuse.com/#feat=svg-fragment" target="_blank" rel="noopener noreferrer">support SVG fragment identifiers</a> for SVG stacks to work.</li>
-				<li>Support for SVG fragment identifiers hasn't always been that decent. For older browsers you will have to use some prolyfill like <a href="https://github.com/preciousforever/SVG-Stacker/blob/master/fixsvgstack.jquery.js" target="_blank" rel="noopener noreferrer">fixsvgstack.jquery.js</a>.</li>
-			</ul>
-		</header>
-		<section>
+</head>
 
-<!--
+<body>
+	<header>
+		<h1>SVG stack preview</h1>
+		<p>This preview features an SVG stack. Please have a look at the HTML source for further details and be aware of
+			the following constraints:</p>
+		<ul>
+			<li>Your browser has to <a href="http://caniuse.com/#feat=svg-fragment" target="_blank"
+					rel="noopener noreferrer">support SVG fragment identifiers</a> for SVG stacks to work.</li>
+			<li>Support for SVG fragment identifiers hasn't always been that decent. For older browsers you will have to
+				use some prolyfill like <a
+					href="https://github.com/preciousforever/SVG-Stacker/blob/master/fixsvgstack.jquery.js"
+					target="_blank" rel="noopener noreferrer">fixsvgstack.jquery.js</a>.</li>
+		</ul>
+	</header>
+	<section>
+
+		<!--
 
 SVG stack
 ====================================================================================================
@@ -83,359 +336,371 @@ selector is used to show the very shape that is referenced by the fragment ident
 
 -->
 
-			<ul>
-
-				<li title="aptaim">
-					<div class="icon-box">
-
-						<!-- aptaim -->
-						<img src="../icons/icons.svg#aptaim" class="svg-aptaim-dims" alt="aptaim"/>
-
-					</div>
-					<h2>aptaim</h2>
-				</li>
-				<li title="bel">
-					<div class="icon-box">
-
-						<!-- bel -->
-						<img src="../icons/icons.svg#bel" class="svg-bel-dims" alt="bel"/>
-
-					</div>
-					<h2>bel</h2>
-				</li>
-				<li title="close-svgrepo-com">
-					<div class="icon-box">
-
-						<!-- close-svgrepo-com -->
-						<img src="../icons/icons.svg#close-svgrepo-com" class="svg-close-svgrepo-com-dims" alt="close-svgrepo-com"/>
-
-					</div>
-					<h2>close-svgrepo-com</h2>
-				</li>
-				<li title="comptr">
-					<div class="icon-box">
-
-						<!-- comptr -->
-						<img src="../icons/icons.svg#comptr" class="svg-comptr-dims" alt="comptr"/>
-
-					</div>
-					<h2>comptr</h2>
-				</li>
-				<li title="computer-and-house-svgrepo-com">
-					<div class="icon-box">
-
-						<!-- computer-and-house-svgrepo-com -->
-						<img src="../icons/icons.svg#computer-and-house-svgrepo-com" class="svg-computer-and-house-svgrepo-com-dims" alt="computer-and-house-svgrepo-com"/>
-
-					</div>
-					<h2>computer-and-house-svgrepo-com</h2>
-				</li>
-				<li title="copy-svgrepo-com">
-					<div class="icon-box">
-
-						<!-- copy-svgrepo-com -->
-						<img src="../icons/icons.svg#copy-svgrepo-com" class="svg-copy-svgrepo-com-dims" alt="copy-svgrepo-com"/>
-
-					</div>
-					<h2>copy-svgrepo-com</h2>
-				</li>
-				<li title="copymel">
-					<div class="icon-box">
-
-						<!-- copymel -->
-						<img src="../icons/icons.svg#copymel" class="svg-copymel-dims" alt="copymel"/>
-
-					</div>
-					<h2>copymel</h2>
-				</li>
-				<li title="dc">
-					<div class="icon-box">
-
-						<!-- dc -->
-						<img src="../icons/icons.svg#dc" class="svg-dc-dims" alt="dc"/>
-
-					</div>
-					<h2>dc</h2>
-				</li>
-				<li title="down">
-					<div class="icon-box">
-
-						<!-- down -->
-						<img src="../icons/icons.svg#down" class="svg-down-dims" alt="down"/>
-
-					</div>
-					<h2>down</h2>
-				</li>
-				<li title="galka">
-					<div class="icon-box">
-
-						<!-- galka -->
-						<img src="../icons/icons.svg#galka" class="svg-galka-dims" alt="galka"/>
-
-					</div>
-					<h2>galka</h2>
-				</li>
-				<li title="golosa">
-					<div class="icon-box">
-
-						<!-- golosa -->
-						<img src="../icons/icons.svg#golosa" class="svg-golosa-dims" alt="golosa"/>
-
-					</div>
-					<h2>golosa</h2>
-				</li>
-				<li title="igroki">
-					<div class="icon-box">
-
-						<!-- igroki -->
-						<img src="../icons/icons.svg#igroki" class="svg-igroki-dims" alt="igroki"/>
-
-					</div>
-					<h2>igroki</h2>
-				</li>
-				<li title="ip">
-					<div class="icon-box">
-
-						<!-- ip -->
-						<img src="../icons/icons.svg#ip" class="svg-ip-dims" alt="ip"/>
-
-					</div>
-					<h2>ip</h2>
-				</li>
-				<li title="laun">
-					<div class="icon-box">
-
-						<!-- laun -->
-						<img src="../icons/icons.svg#laun" class="svg-laun-dims" alt="laun"/>
-
-					</div>
-					<h2>laun</h2>
-				</li>
-				<li title="left-circle-svgrepo-com">
-					<div class="icon-box">
-
-						<!-- left-circle-svgrepo-com -->
-						<img src="../icons/icons.svg#left-circle-svgrepo-com" class="svg-left-circle-svgrepo-com-dims" alt="left-circle-svgrepo-com"/>
-
-					</div>
-					<h2>left-circle-svgrepo-com</h2>
-				</li>
-				<li title="magnifier-svgrepo-com">
-					<div class="icon-box">
-
-						<!-- magnifier-svgrepo-com -->
-						<img src="../icons/icons.svg#magnifier-svgrepo-com" class="svg-magnifier-svgrepo-com-dims" alt="magnifier-svgrepo-com"/>
-
-					</div>
-					<h2>magnifier-svgrepo-com</h2>
-				</li>
-				<li title="menu-1-svgrepo-com">
-					<div class="icon-box">
-
-						<!-- menu-1-svgrepo-com -->
-						<img src="../icons/icons.svg#menu-1-svgrepo-com" class="svg-menu-1-svgrepo-com-dims" alt="menu-1-svgrepo-com"/>
-
-					</div>
-					<h2>menu-1-svgrepo-com</h2>
-				</li>
-				<li title="palec">
-					<div class="icon-box">
-
-						<!-- palec -->
-						<img src="../icons/icons.svg#palec" class="svg-palec-dims" alt="palec"/>
-
-					</div>
-					<h2>palec</h2>
-				</li>
-				<li title="ping">
-					<div class="icon-box">
-
-						<!-- ping -->
-						<img src="../icons/icons.svg#ping" class="svg-ping-dims" alt="ping"/>
-
-					</div>
-					<h2>ping</h2>
-				</li>
-				<li title="plat">
-					<div class="icon-box">
-
-						<!-- plat -->
-						<img src="../icons/icons.svg#plat" class="svg-plat-dims" alt="plat"/>
-
-					</div>
-					<h2>plat</h2>
-				</li>
-				<li title="player">
-					<div class="icon-box">
-
-						<!-- player -->
-						<img src="../icons/icons.svg#player" class="svg-player-dims" alt="player"/>
-
-					</div>
-					<h2>player</h2>
-				</li>
-				<li title="podpis">
-					<div class="icon-box">
-
-						<!-- podpis -->
-						<img src="../icons/icons.svg#podpis" class="svg-podpis-dims" alt="podpis"/>
-
-					</div>
-					<h2>podpis</h2>
-				</li>
-				<li title="rec">
-					<div class="icon-box">
-
-						<!-- rec -->
-						<img src="../icons/icons.svg#rec" class="svg-rec-dims" alt="rec"/>
-
-					</div>
-					<h2>rec</h2>
-				</li>
-				<li title="right-circle-svgrepo-com">
-					<div class="icon-box">
-
-						<!-- right-circle-svgrepo-com -->
-						<img src="../icons/icons.svg#right-circle-svgrepo-com" class="svg-right-circle-svgrepo-com-dims" alt="right-circle-svgrepo-com"/>
-
-					</div>
-					<h2>right-circle-svgrepo-com</h2>
-				</li>
-				<li title="sait">
-					<div class="icon-box">
-
-						<!-- sait -->
-						<img src="../icons/icons.svg#sait" class="svg-sait-dims" alt="sait"/>
-
-					</div>
-					<h2>sait</h2>
-				</li>
-				<li title="server">
-					<div class="icon-box">
-
-						<!-- server -->
-						<img src="../icons/icons.svg#server" class="svg-server-dims" alt="server"/>
-
-					</div>
-					<h2>server</h2>
-				</li>
-				<li title="signl">
-					<div class="icon-box">
-
-						<!-- signl -->
-						<img src="../icons/icons.svg#signl" class="svg-signl-dims" alt="signl"/>
-
-					</div>
-					<h2>signl</h2>
-				</li>
-				<li title="smartphone-2-svgrepo-com">
-					<div class="icon-box">
-
-						<!-- smartphone-2-svgrepo-com -->
-						<img src="../icons/icons.svg#smartphone-2-svgrepo-com" class="svg-smartphone-2-svgrepo-com-dims" alt="smartphone-2-svgrepo-com"/>
-
-					</div>
-					<h2>smartphone-2-svgrepo-com</h2>
-				</li>
-				<li title="strana">
-					<div class="icon-box">
-
-						<!-- strana -->
-						<img src="../icons/icons.svg#strana" class="svg-strana-dims" alt="strana"/>
-
-					</div>
-					<h2>strana</h2>
-				</li>
-				<li title="tg">
-					<div class="icon-box">
-
-						<!-- tg -->
-						<img src="../icons/icons.svg#tg" class="svg-tg-dims" alt="tg"/>
-
-					</div>
-					<h2>tg</h2>
-				</li>
-				<li title="time">
-					<div class="icon-box">
-
-						<!-- time -->
-						<img src="../icons/icons.svg#time" class="svg-time-dims" alt="time"/>
-
-					</div>
-					<h2>time</h2>
-				</li>
-				<li title="top-minecrafter">
-					<div class="icon-box">
-
-						<!-- top-minecrafter -->
-						<img src="../icons/icons.svg#top-minecrafter" class="svg-top-minecrafter-dims" alt="top-minecrafter"/>
-
-					</div>
-					<h2>top-minecrafter</h2>
-				</li>
-				<li title="up">
-					<div class="icon-box">
-
-						<!-- up -->
-						<img src="../icons/icons.svg#up" class="svg-up-dims" alt="up"/>
-
-					</div>
-					<h2>up</h2>
-				</li>
-				<li title="vers">
-					<div class="icon-box">
-
-						<!-- vers -->
-						<img src="../icons/icons.svg#vers" class="svg-vers-dims" alt="vers"/>
-
-					</div>
-					<h2>vers</h2>
-				</li>
-				<li title="vk">
-					<div class="icon-box">
-
-						<!-- vk -->
-						<img src="../icons/icons.svg#vk" class="svg-vk-dims" alt="vk"/>
-
-					</div>
-					<h2>vk</h2>
-				</li>
-				<li title="windows-applications-svgrepo-com">
-					<div class="icon-box">
-
-						<!-- windows-applications-svgrepo-com -->
-						<img src="../icons/icons.svg#windows-applications-svgrepo-com" class="svg-windows-applications-svgrepo-com-dims" alt="windows-applications-svgrepo-com"/>
-
-					</div>
-					<h2>windows-applications-svgrepo-com</h2>
-				</li>
-				<li title="yaz">
-					<div class="icon-box">
-
-						<!-- yaz -->
-						<img src="../icons/icons.svg#yaz" class="svg-yaz-dims" alt="yaz"/>
-
-					</div>
-					<h2>yaz</h2>
-				</li>
-				<li title="yt">
-					<div class="icon-box">
-
-						<!-- yt -->
-						<img src="../icons/icons.svg#yt" class="svg-yt-dims" alt="yt"/>
-
-					</div>
-					<h2>yt</h2>
-				</li>
-			</ul>
-
-<!--
+		<ul>
+
+			<li title="aptaim">
+				<div class="icon-box">
+
+					<!-- aptaim -->
+					<img src="./icons/icons.svg#aptaim" class="svg-aptaim-dims" alt="aptaim" />
+
+				</div>
+				<h2>aptaim</h2>
+			</li>
+			<li title="bel">
+				<div class="icon-box">
+
+					<!-- bel -->
+					<img src="./icons/icons.svg#bel" class="svg-bel-dims" alt="bel" />
+
+				</div>
+				<h2>bel</h2>
+			</li>
+			<li title="close-svgrepo-com">
+				<div class="icon-box">
+
+					<!-- close-svgrepo-com -->
+					<img src="./icons/icons.svg#close-svgrepo-com" class="svg-close-svgrepo-com-dims"
+						alt="close-svgrepo-com" />
+
+				</div>
+				<h2>close-svgrepo-com</h2>
+			</li>
+			<li title="comptr">
+				<div class="icon-box">
+
+					<!-- comptr -->
+					<img src="./icons/icons.svg#comptr" class="svg-comptr-dims" alt="comptr" />
+
+				</div>
+				<h2>comptr</h2>
+			</li>
+			<li title="computer-and-house-svgrepo-com">
+				<div class="icon-box">
+
+					<!-- computer-and-house-svgrepo-com -->
+					<img src="./icons/icons.svg#computer-and-house-svgrepo-com"
+						class="svg-computer-and-house-svgrepo-com-dims" alt="computer-and-house-svgrepo-com" />
+
+				</div>
+				<h2>computer-and-house-svgrepo-com</h2>
+			</li>
+			<li title="copy-svgrepo-com">
+				<div class="icon-box">
+
+					<!-- copy-svgrepo-com -->
+					<img src="./icons/icons.svg#copy-svgrepo-com" class="svg-copy-svgrepo-com-dims"
+						alt="copy-svgrepo-com" />
+
+				</div>
+				<h2>copy-svgrepo-com</h2>
+			</li>
+			<li title="copymel">
+				<div class="icon-box">
+
+					<!-- copymel -->
+					<img src="./icons/icons.svg#copymel" class="svg-copymel-dims" alt="copymel" />
+
+				</div>
+				<h2>copymel</h2>
+			</li>
+			<li title="dc">
+				<div class="icon-box">
+
+					<!-- dc -->
+					<img src="./icons/icons.svg#dc" class="svg-dc-dims" alt="dc" />
+
+				</div>
+				<h2>dc</h2>
+			</li>
+			<li title="down">
+				<div class="icon-box">
+
+					<!-- down -->
+					<img src="./icons/icons.svg#down" class="svg-down-dims" alt="down" />
+
+				</div>
+				<h2>down</h2>
+			</li>
+			<li title="galka">
+				<div class="icon-box">
+
+					<!-- galka -->
+					<img src="./icons/icons.svg#galka" class="svg-galka-dims" alt="galka" />
+
+				</div>
+				<h2>galka</h2>
+			</li>
+			<li title="golosa">
+				<div class="icon-box">
+
+					<!-- golosa -->
+					<img src="./icons/icons.svg#golosa" class="svg-golosa-dims" alt="golosa" />
+
+				</div>
+				<h2>golosa</h2>
+			</li>
+			<li title="igroki">
+				<div class="icon-box">
+
+					<!-- igroki -->
+					<img src="./icons/icons.svg#igroki" class="svg-igroki-dims" alt="igroki" />
+
+				</div>
+				<h2>igroki</h2>
+			</li>
+			<li title="ip">
+				<div class="icon-box">
+
+					<!-- ip -->
+					<img src="./icons/icons.svg#ip" class="svg-ip-dims" alt="ip" />
+
+				</div>
+				<h2>ip</h2>
+			</li>
+			<li title="laun">
+				<div class="icon-box">
+
+					<!-- laun -->
+					<img src="./icons/icons.svg#laun" class="svg-laun-dims" alt="laun" />
+
+				</div>
+				<h2>laun</h2>
+			</li>
+			<li title="left-circle-svgrepo-com">
+				<div class="icon-box">
+
+					<!-- left-circle-svgrepo-com -->
+					<img src="./icons/icons.svg#left-circle-svgrepo-com" class="svg-left-circle-svgrepo-com-dims"
+						alt="left-circle-svgrepo-com" />
+
+				</div>
+				<h2>left-circle-svgrepo-com</h2>
+			</li>
+			<li title="magnifier-svgrepo-com">
+				<div class="icon-box">
+
+					<!-- magnifier-svgrepo-com -->
+					<img src="./icons/icons.svg#magnifier-svgrepo-com" class="svg-magnifier-svgrepo-com-dims"
+						alt="magnifier-svgrepo-com" />
+
+				</div>
+				<h2>magnifier-svgrepo-com</h2>
+			</li>
+			<li title="menu-1-svgrepo-com">
+				<div class="icon-box">
+
+					<!-- menu-1-svgrepo-com -->
+					<img src="./icons/icons.svg#menu-1-svgrepo-com" class="svg-menu-1-svgrepo-com-dims"
+						alt="menu-1-svgrepo-com" />
+
+				</div>
+				<h2>menu-1-svgrepo-com</h2>
+			</li>
+			<li title="palec">
+				<div class="icon-box">
+
+					<!-- palec -->
+					<img src="./icons/icons.svg#palec" class="svg-palec-dims" alt="palec" />
+
+				</div>
+				<h2>palec</h2>
+			</li>
+			<li title="ping">
+				<div class="icon-box">
+
+					<!-- ping -->
+					<img src="./icons/icons.svg#ping" class="svg-ping-dims" alt="ping" />
+
+				</div>
+				<h2>ping</h2>
+			</li>
+			<li title="plat">
+				<div class="icon-box">
+
+					<!-- plat -->
+					<img src="./icons/icons.svg#plat" class="svg-plat-dims" alt="plat" />
+
+				</div>
+				<h2>plat</h2>
+			</li>
+			<li title="player">
+				<div class="icon-box">
+
+					<!-- player -->
+					<img src="./icons/icons.svg#player" class="svg-player-dims" alt="player" />
+
+				</div>
+				<h2>player</h2>
+			</li>
+			<li title="podpis">
+				<div class="icon-box">
+
+					<!-- podpis -->
+					<img src="./icons/icons.svg#podpis" class="svg-podpis-dims" alt="podpis" />
+
+				</div>
+				<h2>podpis</h2>
+			</li>
+			<li title="rec">
+				<div class="icon-box">
+
+					<!-- rec -->
+					<img src="./icons/icons.svg#rec" class="svg-rec-dims" alt="rec" />
+
+				</div>
+				<h2>rec</h2>
+			</li>
+			<li title="right-circle-svgrepo-com">
+				<div class="icon-box">
+
+					<!-- right-circle-svgrepo-com -->
+					<img src="./icons/icons.svg#right-circle-svgrepo-com" class="svg-right-circle-svgrepo-com-dims"
+						alt="right-circle-svgrepo-com" />
+
+				</div>
+				<h2>right-circle-svgrepo-com</h2>
+			</li>
+			<li title="sait">
+				<div class="icon-box">
+
+					<!-- sait -->
+					<img src="./icons/icons.svg#sait" class="svg-sait-dims" alt="sait" />
+
+				</div>
+				<h2>sait</h2>
+			</li>
+			<li title="server">
+				<div class="icon-box">
+
+					<!-- server -->
+					<img src="./icons/icons.svg#server" class="svg-server-dims" alt="server" />
+
+				</div>
+				<h2>server</h2>
+			</li>
+			<li title="signl">
+				<div class="icon-box">
+
+					<!-- signl -->
+					<img src="./icons/icons.svg#signl" class="svg-signl-dims" alt="signl" />
+
+				</div>
+				<h2>signl</h2>
+			</li>
+			<li title="smartphone-2-svgrepo-com">
+				<div class="icon-box">
+
+					<!-- smartphone-2-svgrepo-com -->
+					<img src="./icons/icons.svg#smartphone-2-svgrepo-com" class="svg-smartphone-2-svgrepo-com-dims"
+						alt="smartphone-2-svgrepo-com" />
+
+				</div>
+				<h2>smartphone-2-svgrepo-com</h2>
+			</li>
+			<li title="strana">
+				<div class="icon-box">
+
+					<!-- strana -->
+					<img src="./icons/icons.svg#strana" class="svg-strana-dims" alt="strana" />
+
+				</div>
+				<h2>strana</h2>
+			</li>
+			<li title="tg">
+				<div class="icon-box">
+
+					<!-- tg -->
+					<img src="./icons/icons.svg#tg" class="svg-tg-dims" alt="tg" />
+
+				</div>
+				<h2>tg</h2>
+			</li>
+			<li title="time">
+				<div class="icon-box">
+
+					<!-- time -->
+					<img src="./icons/icons.svg#time" class="svg-time-dims" alt="time" />
+
+				</div>
+				<h2>time</h2>
+			</li>
+			<li title="top-minecrafter">
+				<div class="icon-box">
+
+					<!-- top-minecrafter -->
+					<img src="./icons/icons.svg#top-minecrafter" class="svg-top-minecrafter-dims"
+						alt="top-minecrafter" />
+
+				</div>
+				<h2>top-minecrafter</h2>
+			</li>
+			<li title="up">
+				<div class="icon-box">
+
+					<!-- up -->
+					<img src="./icons/icons.svg#up" class="svg-up-dims" alt="up" />
+
+				</div>
+				<h2>up</h2>
+			</li>
+			<li title="vers">
+				<div class="icon-box">
+
+					<!-- vers -->
+					<img src="./icons/icons.svg#vers" class="svg-vers-dims" alt="vers" />
+
+				</div>
+				<h2>vers</h2>
+			</li>
+			<li title="vk">
+				<div class="icon-box">
+
+					<!-- vk -->
+					<img src="./icons/icons.svg#vk" class="svg-vk-dims" alt="vk" />
+
+				</div>
+				<h2>vk</h2>
+			</li>
+			<li title="windows-applications-svgrepo-com">
+				<div class="icon-box">
+
+					<!-- windows-applications-svgrepo-com -->
+					<img src="./icons/icons.svg#windows-applications-svgrepo-com"
+						class="svg-windows-applications-svgrepo-com-dims" alt="windows-applications-svgrepo-com" />
+
+				</div>
+				<h2>windows-applications-svgrepo-com</h2>
+			</li>
+			<li title="yaz">
+				<div class="icon-box">
+
+					<!-- yaz -->
+					<img src="./icons/icons.svg#yaz" class="svg-yaz-dims" alt="yaz" />
+
+				</div>
+				<h2>yaz</h2>
+			</li>
+			<li title="yt">
+				<div class="icon-box">
+
+					<!-- yt -->
+					<img src="./icons/icons.svg#yt" class="svg-yt-dims" alt="yt" />
+
+				</div>
+				<h2>yt</h2>
+			</li>
+		</ul>
+
+		<!--
 ====================================================================================================
 -->
 
-		</section>
-		<footer>
-			<p>Generated at Mon, 27 Oct 2025 15:38:19 GMT by <a href="https://github.com/svg-sprite/svg-sprite" target="_blank" rel="noopener noreferrer">svg-sprite</a>.</p>
-		</footer>
-	</body>
+	</section>
+	<footer>
+		<p>Generated at Tue, 28 Oct 2025 12:11:42 GMT by <a href="https://github.com/svg-sprite/svg-sprite"
+				target="_blank" rel="noopener noreferrer">svg-sprite</a>.</p>
+	</footer>
+</body>
+
 </html>
